@@ -1,0 +1,8 @@
+#Variables: %player% for name of the winner and %koth% for the name of the koth.
+#If the capturetype is "faction" the commands will be executed for all online members of the winner faction.
+#Also if the capturetype is "faction" you can use %faction% as variable for the name of the faction.
+#If Reward-only-factionplayers-in-cap-area only the members of the faction that are inside of the cap are will get the custom rewards.
+Rewards:
+  Reward-only-factionplayers-in-cap-area: true
+Commands:
+    - msg %player% &eCongrats &a%player% &efor winning the koth &5%koth%
