@@ -11,6 +11,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 import me.ByteMagic.KothRewards.Hooks.FactionsUUID;
 import me.ByteMagic.KothRewards.Hooks.MassiveFactions;
 import me.ByteMagic.KothRewards.Utils.FancyMessage;
+import subside.plugins.koth.adapter.RunningKoth;
 import subside.plugins.koth.events.KothEndEvent;
 
 public class KothEvents implements Listener {
@@ -19,6 +20,9 @@ public class KothEvents implements Listener {
 	public void OnKothEnd(KothEndEvent e){
 		if (e.getWinner() != null){
 		   String CaptureType = e.getWinner().getUniqueClassIdentifier().toString();
+			if (e.getReason() == RunningKoth.EndReason.FORCED){
+				return;
+			}
 		    List<String> list = Main.getInstance().getConfig().getStringList("Commands");
                 new BukkitRunnable()
                 {
