@@ -5,7 +5,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
-import subside.plugins.koth.ConfigHandler;
 
 public class Main extends JavaPlugin{
 	
@@ -30,7 +29,7 @@ public class Main extends JavaPlugin{
 	public boolean preEnable(){
 		log(FancyMessage.color("&b=== &eSTART &b==="));
 		this.timeEnableStart = System.currentTimeMillis();
-		Plugin koth = Bukkit.getPluginManager().getPlugin("Koth");
+		Plugin koth = Bukkit.getPluginManager().getPlugin("KoTH");
 		if (koth != null){
 			log("Koth hook.");
 		}else{

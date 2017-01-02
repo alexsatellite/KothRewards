@@ -11,8 +11,8 @@ import org.bukkit.scheduler.BukkitRunnable;
 import me.ByteMagic.KothRewards.Hooks.FactionsUUID;
 import me.ByteMagic.KothRewards.Hooks.MassiveFactions;
 import me.ByteMagic.KothRewards.Utils.FancyMessage;
-import subside.plugins.koth.adapter.RunningKoth;
 import subside.plugins.koth.events.KothEndEvent;
+import subside.plugins.koth.gamemodes.RunningKoth;
 
 public class KothEvents implements Listener {
 
